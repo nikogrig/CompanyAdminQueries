@@ -1,0 +1,51 @@
+﻿@model EditEmployeeFormModel
+@{
+    ViewData["Title"] = $"Details for {Model.UserName}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+<h5><b>UserName: </b>@Model.UserName</h5>
+<h6><b>Full Name: </b>@Model.FirstName @Model.LastName</h6>
+<h6><b>Gender: </b>@(Model.Gender == true ? "Male" : "Female")</h6>
+<h6><b>BirthDate: </b>@Model.Birthdate.ToShortDateString()</h6>
+<h6><b>Current Status: </b>@Model.Status</h6>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Edit Employee account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HireDate"></label>
+                <input asp-for="HireDate" class="form-control" />
+                <span asp-validation-for="HireDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary"></label>
+                <input type="number" asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status"></label>
+                <select asp-for="Status" asp-items="Html.GetEnumSelectList<Status>()" class="form-control"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <div>
+                <br />
+                <a asp-area="HumanResources" asp-controller="HR" asp-action="Employees" class="btn btn-default">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+
+

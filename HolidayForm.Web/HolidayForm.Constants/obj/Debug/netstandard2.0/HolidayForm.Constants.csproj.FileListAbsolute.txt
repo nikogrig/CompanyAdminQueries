@@ -1,0 +1,8 @@
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\bin\Debug\netstandard2.0\HolidayForm.Constants.deps.json
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\bin\Debug\netstandard2.0\HolidayForm.Constants.dll
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\bin\Debug\netstandard2.0\HolidayForm.Constants.pdb
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\obj\Debug\netstandard2.0\HolidayForm.Constants.csproj.CoreCompileInputs.cache
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\obj\Debug\netstandard2.0\HolidayForm.Constants.AssemblyInfoInputs.cache
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\obj\Debug\netstandard2.0\HolidayForm.Constants.AssemblyInfo.cs
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\obj\Debug\netstandard2.0\HolidayForm.Constants.dll
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Constants\obj\Debug\netstandard2.0\HolidayForm.Constants.pdb

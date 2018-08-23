@@ -1,0 +1,52 @@
+﻿@model DepartmentsListingViewModel
+@{
+    ViewData["Title"] = $"Departments";
+    ViewData.AddActiveAdminPage(ManageNavHrPages.Departments);
+}
+
+<h2>Departments</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Manager</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model.Departments)
+        {
+        <tr>
+            <td>@department.Title</td>
+            <td>
+                @(department.Manager == null ? "No Manager in the department" : department.Manager)
+
+            </td>
+            <td><a asp-area="HumanResources" asp-controller="HR" asp-action="EditDepartments" asp-route-id="@department.Id" class="btn btn-primary">Edit</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.TotalDepartments > Model.Departments.Count())
+{
+    <ul class="pagination">
+        <li class="@(Model.CurrentPage == 1 ? "disabled" : string.Empty)">
+            <a asp-controller="HR"
+               asp-action="Departments"
+               asp-route-page="@Model.PreviousPage"
+               aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="@(Model.CurrentPage == Model.TotalPages ? "disabled" : string.Empty)">
+            <a asp-controller="HR"
+               asp-action="Departments"
+               asp-route-page="@Model.NextPage"
+               aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+}

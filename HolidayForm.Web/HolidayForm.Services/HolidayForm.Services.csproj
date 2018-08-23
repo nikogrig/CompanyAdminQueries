@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HolidayForm.Common\HolidayForm.Common.csproj" />
+    <ProjectReference Include="..\HolidayForm.Constants\HolidayForm.Constants.csproj" />
+    <ProjectReference Include="..\HolidayForm.Data\HolidayForm.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+    <PackageReference Include="HtmlSanitizer" Version="4.0.187" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\Models\" />
+  </ItemGroup>
+
+</Project>

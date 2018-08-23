@@ -1,0 +1,18 @@
+﻿@using HolidayForm.Web.Areas.HumanResources.Views.HR
+@inject SignInManager<User> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+
+<ul class="nav nav-pills nav-stacked">
+    <li class="@ManageNavHrPages.EmployeesNavClass(ViewContext)"><a asp-action="Employees">Employees</a></li>
+    @if (hasExternalLogins)
+    {
+    <li class="@ManageNavHrPages.ExternalLoginsNavClass(ViewContext)"><a asp-action="ExternalLogins">External logins</a></li>
+    }
+    <li class="@ManageNavHrPages.DepartmentsUserNavClass(ViewContext)"><a asp-action="Departments">Departments</a></li>
+    <li class="@ManageNavHrPages.CreateJobTitleNavClass(ViewContext)"><a asp-action="CreateJobTitle">Create Job Title</a></li>
+    <li class="@ManageNavHrPages.RequestsNavClass(ViewContext)"><a asp-controller="Employees" asp-action="Requests">Requests</a></li>
+</ul>
+
+

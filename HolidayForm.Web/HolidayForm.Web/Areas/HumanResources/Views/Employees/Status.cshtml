@@ -1,0 +1,53 @@
+﻿@model EmployeeChangeStatusViewModel
+
+@{
+    ViewData["Title"] = "Status";
+}
+
+<h2>@ViewData["Title"]</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Job Title</th>
+            <th>HireDate</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.UserName</td>
+            <td>@(Model.FirstName + " " + Model.LastName)</td>
+            <td>@Model.JobTitle</td>
+            <td>@Model.HireDate</td>
+            <td><b>@Model.Status.ToString().ToUpper()</b></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <h3>Update Work Status</h3>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Status"></label>
+                <select asp-for="Status" asp-items="Html.GetEnumSelectList<Status>()" class="form-control"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
+<br />
+<a asp-controller="Employees" asp-action="Requests" class="btn btn-default">Back</a>
+
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+

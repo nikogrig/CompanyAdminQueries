@@ -1,0 +1,26 @@
+﻿@model ManagerDepartmentsListingViewModel
+@{
+    ViewData["Title"] = "Queries for Departments";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Description</th>
+            <th>Employees</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model.Departments)
+        {
+            <tr>
+                <td>@department.Title</td>
+                <td>@department.Description</td>
+                <td><a class="btn btn-primary" asp-action="Staff" asp-route-departmentId="@department.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

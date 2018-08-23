@@ -1,0 +1,83 @@
+﻿@model EmployeeListingViewModel
+@{
+    ViewData["Title"] = "Panel";
+    ViewData.AddActiveAdminPage(ManageNavHrPages.Employees);
+}
+
+@inject UserManager<User> UserManager
+
+<h2>Panel</h2>
+
+@if (Model.TotalEmployees > Model.Employees.Count())
+{
+    <ul class="pagination">
+        <li class="@(Model.CurrentPage == 1 ? "disabled" : string.Empty)">
+            <a asp-controller="HR"
+               asp-action="Employees"
+               asp-route-page="@Model.PreviousPage"
+               aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="@(Model.CurrentPage == Model.TotalPages ? "disabled" : string.Empty)">
+            <a asp-controller="HR"
+               asp-action="Employees"
+               asp-route-page="@Model.NextPage"
+               aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+}
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Job Title</th>
+            <th>Department</th>
+            <th>Manger Username</th>
+            <th>Personal Data</th>
+            <th>Department Data</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Employees)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@(user.FirstName + ' ' + user.LastName)</td>
+                <td>@user.JobTitle</td>
+                <td>@user.Department</td>
+                <td>@user.Manager</td>
+                <td><a asp-area="HumanResources" asp-controller="HR" asp-action="Details" asp-route-employeeId="@user.Id" class="btn btn-primary">Details</a></td>
+                <td><a asp-area="HumanResources" asp-controller="HR" asp-action="AddDepartment" asp-route-employeeId="@user.Id" class="btn btn-primary">Details</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.TotalEmployees > Model.Employees.Count())
+{
+    <ul class="pagination">
+        <li class="@(Model.CurrentPage == 1 ? "disabled" : string.Empty)">
+            <a asp-controller="HR"
+               asp-action="Employees"
+               asp-route-page="@Model.PreviousPage"
+               aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="@(Model.CurrentPage == Model.TotalPages ? "disabled" : string.Empty)">
+            <a asp-controller="HR"
+               asp-action="Employees"
+               asp-route-page="@Model.NextPage"
+               aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+}

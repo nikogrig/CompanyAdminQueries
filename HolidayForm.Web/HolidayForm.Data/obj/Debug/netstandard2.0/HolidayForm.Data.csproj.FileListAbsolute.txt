@@ -1,0 +1,12 @@
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\bin\Debug\netstandard2.0\HolidayForm.Data.deps.json
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\bin\Debug\netstandard2.0\HolidayForm.Data.dll
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.csproj.CoreCompileInputs.cache
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.AssemblyInfoInputs.cache
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.AssemblyInfo.cs
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\bin\Debug\netstandard2.0\HolidayForm.Data.pdb
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.dll
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.pdb
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.csprojAssemblyReference.cache
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\bin\Debug\netstandard2.0\HolidayForm.Constants.dll
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\bin\Debug\netstandard2.0\HolidayForm.Constants.pdb
+C:\My Staff\MyProjects\El Trade\HolidayForm.Web\HolidayForm.Data\obj\Debug\netstandard2.0\HolidayForm.Data.csproj.CopyComplete

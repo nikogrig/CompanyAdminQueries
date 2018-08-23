@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayForm.Web", "HolidayForm.Web\HolidayForm.Web.csproj", "{7B8D8737-E256-4914-932E-78EE53005463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayForm.Data", "HolidayForm.Data\HolidayForm.Data.csproj", "{3212A31D-FFD5-4622-9414-E8A5760934DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayForm.Services", "HolidayForm.Services\HolidayForm.Services.csproj", "{17A8FCE0-80C9-4652-A590-BA5C418D5DC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayForm.Infrastructure", "HolidayForm.Infrastructure\HolidayForm.Infrastructure.csproj", "{C086382D-7A81-4130-8C0C-FE4E545B9380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayForm.Common", "HolidayForm.Common\HolidayForm.Common.csproj", "{13A961ED-FE52-477A-9837-966085F645DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolidayForm.Constants", "HolidayForm.Constants\HolidayForm.Constants.csproj", "{42D29A2B-085C-4BE3-9B56-14AA0250F3FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B8D8737-E256-4914-932E-78EE53005463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8D8737-E256-4914-932E-78EE53005463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8D8737-E256-4914-932E-78EE53005463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8D8737-E256-4914-932E-78EE53005463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3212A31D-FFD5-4622-9414-E8A5760934DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3212A31D-FFD5-4622-9414-E8A5760934DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3212A31D-FFD5-4622-9414-E8A5760934DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3212A31D-FFD5-4622-9414-E8A5760934DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A8FCE0-80C9-4652-A590-BA5C418D5DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A8FCE0-80C9-4652-A590-BA5C418D5DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A8FCE0-80C9-4652-A590-BA5C418D5DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A8FCE0-80C9-4652-A590-BA5C418D5DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C086382D-7A81-4130-8C0C-FE4E545B9380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C086382D-7A81-4130-8C0C-FE4E545B9380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C086382D-7A81-4130-8C0C-FE4E545B9380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C086382D-7A81-4130-8C0C-FE4E545B9380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A961ED-FE52-477A-9837-966085F645DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A961ED-FE52-477A-9837-966085F645DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A961ED-FE52-477A-9837-966085F645DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A961ED-FE52-477A-9837-966085F645DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D29A2B-085C-4BE3-9B56-14AA0250F3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D29A2B-085C-4BE3-9B56-14AA0250F3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D29A2B-085C-4BE3-9B56-14AA0250F3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D29A2B-085C-4BE3-9B56-14AA0250F3FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CD623BF-8849-46A1-8A3F-67C7397F2E2E}
+	EndGlobalSection
+EndGlobal

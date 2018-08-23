@@ -1,0 +1,46 @@
+﻿@model EnrolledEmployeesIndDepartmentViewModel
+@{
+    ViewData["Title"] = "Staff";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Employee Status</th>
+            <th>Queries</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var employee in Model.Employees)
+        {
+        <tr>
+            <td>@(employee.UserName)</td>
+            <td>@(employee.FirstName + " " + employee.LastName)</td>
+            <td>@employee.Email</td>
+            <td>@employee.Status</td>
+            <td>
+                @foreach (var query in employee.Forms)
+                {
+                    <ul class="list-group">@query</ul>
+                }
+            </td>
+            @if (employee.Forms.Count() > 0)
+            {
+                <td><a class="btn btn-primary" asp-action="Queries" asp-route-employeeId="@employee.Id">Queries</a></td>
+            }
+        </tr>
+        }
+
+
+    </tbody>
+</table>
+
+<td><a class="btn btn-default" asp-action="Tasks">Back</a></td>
+

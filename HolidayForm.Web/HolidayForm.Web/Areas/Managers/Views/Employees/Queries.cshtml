@@ -1,0 +1,46 @@
+﻿@model EmployeeQueriesViewModel
+@{
+    ViewData["Title"] = $"Edit Queries for Employee username- '{@Model.Employee.UserName}'";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3><b>Full Name:</b> @(Model.Employee.FirstName + " " + Model.Employee.LastName)</h3>
+<h5><b>Status:</b> @Model.Employee.Status</h5>
+<h5><b>Hire Date:</b> @Model.Employee.HireDate</h5>
+<h5><b>Job Title:</b> @Model.Employee.JobTitle</h5>
+<br />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Confirm Status</th>
+            <th>Edit</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var query in Model.Employee.Forms)
+        {
+        <tr>
+            <td>@query.Query</td>
+            <td>@query.Title</td>
+            <td>@query.Description</td>
+            <td>@query.StartDate</td>
+            <td>@query.EndDate</td>
+            <td>@(query.IsConfirmed ? "Confirmed" : "Not Confirmed")</td>
+            @if (!query.IsConfirmed)
+            {
+                <td><a class="btn btn-primary" asp-action="Edit" asp-route-formId="@query.Id">Edit</a></td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

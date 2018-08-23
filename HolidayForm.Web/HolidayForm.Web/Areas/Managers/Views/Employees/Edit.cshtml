@@ -1,0 +1,40 @@
+﻿@model FormViewModel
+@{
+    ViewData["Title"] = $"Edit Comfirmation Status for Query ID: {Model.Id}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3><b>Title: </b>@Model.Title</h3>
+<br />
+<h5><b>Description: </b>@Model.Description</h5>
+<br />
+<h5><b>Request Type: </b>@Model.Query</h5>
+<h5><b>Start Date: </b>@Model.StartDate.ToShortDateString()</h5>
+<h5><b>End Date: </b>@Model.EndDate.ToShortDateString()</h5>
+<br />
+<h4><b>Current status: </b>@(Model.IsConfirmed ? "Confirmed" : "Not Confirmed")</h4>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <h4>Update Query status.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IsConfirmed"></label>
+                @Html.RadioButtonFor(g => g.IsConfirmed, true) Confirm
+                @Html.RadioButtonFor(g => g.IsConfirmed, false) Not Confirm
+                <span asp-validation-for="IsConfirmed" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-warning">Update</button>
+        </form>
+    </div>
+</div>
+<br />
+<td><a class="btn btn-default" asp-action="Queries" asp-route-employeeId="@Model.EmployeeId">Back</a></td>
+
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -1,0 +1,43 @@
+﻿@model AddDepartmentAndJobForEmployeeViewModel
+@{
+    ViewData["Title"] = "Edit Department Data";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+<h5><b>UserName: </b>@Model.UserName</h5>
+<h6><b>Full Name: </b>@Model.FirstName @Model.LastName</h6>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <h4>Edit Employee Personal Data.</h4>
+            <hr />
+
+            <div class="form-group">
+                <label asp-for="DepartmentId"></label>
+                <select asp-for="DepartmentId" asp-items="@Model.Departments" class="form-control"></select>
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobTitleId"></label>
+                <select asp-for="JobTitleId" asp-items="@Model.JobTitles" class="form-control"></select>
+                <span asp-validation-for="JobTitleId" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <div>
+                <br />
+                <a asp-area="HumanResources" asp-controller="HR" asp-action="Employees" class="btn btn-default">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+
+

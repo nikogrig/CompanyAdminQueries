@@ -1,0 +1,42 @@
+﻿@model RequestListingViewModel
+@{
+    ViewData["Title"] = "Requests";
+    ViewData.AddActiveAdminPage(ManageNavHrPages.Requests);
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Query</th>
+            <th>Employee</th>
+            <th>Manager Confirmation</th>
+            <th>Updated</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var form in Model.Forms)
+        {
+        <tr>
+            <td>@form.Id</td>
+            <td>@form.Title</td>
+            <td>@form.StartDate.ToShortDateString()</td>
+            <td>@form.EndDate.Date.ToShortDateString()</td>
+            <td>@form.Query</td>
+            <td>@form.Employee</td>
+            <td>@(form.IsConfirmed == true ? "Confirmed" : "Not Confirmed")</td>
+            <td>@(form.IsUpdated == true ? "Updated" : "Not Updated")</td>
+            @if (form.IsUpdated != true)
+            {
+                <td><a asp-controller="Employees" asp-action="Status" asp-route-employeeId="@form.EmployeeId" asp-route-formId="@form.Id" class="btn btn-primary">Edit</a></td>
+            }
+        </tr>
+        }
+    </tbody>
+</table>
